@@ -21,3 +21,21 @@ NOTE:
 ......
 *Function based component are UnControlled component
 *Class based component are Controlled component
+*By-Default you may not use ref attribute on function based component.because,they do not have instances
+
+EG:
+function Mycomponent(){
+  return(<input/>);
+}
+class parent extends React.Component{
+  constructor(props){
+    super(props);
+    this.text=React.createRef();
+  }
+  render(){
+    return(
+      <input ref={this.text}/>       //No this is not a prop
+      <MyComponent ref={this.text}/>         //we ant use like this as ,By-Default you may not use ref attribute on function based component.because,they do not have instances
+    );
+  }
+}
