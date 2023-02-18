@@ -1,0 +1,12 @@
+Using Refs
+...........
+-helps to determine the state of UI element
+-an UI element can be provided a reference by adding "ref" attribute
+
+<input ref="xxx">
+ref refers to input element
+to access the value : this.refs.xxx.value
+
+
+Controlled elements & UnControlled elements
+............................................
