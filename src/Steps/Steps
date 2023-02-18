@@ -10,3 +10,14 @@ to access the value : this.refs.xxx.value
 
 Controlled elements & UnControlled elements
 ............................................
+Controlled elements:React controlls it
+UNControlled elements:Not controlled by react state and are handeled by DOM.
+NOTE: use refs to access value from a uncontrolled component
+.....
+Q)Function based component -Controlled  or UnControlled ?
+Function based component has NO state,NO state means UnControlled elements
+
+NOTE:
+......
+*Function based component are UnControlled component
+*Class based component are Controlled component
