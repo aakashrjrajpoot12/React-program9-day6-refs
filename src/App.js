@@ -13,11 +13,11 @@ export default class App extends React.Component{
     //this.text=React.createRef();
   }
   render(){
-    console.log({this.refs.xxx.value});
+   
     return(
       <>
       <input ref="xxx"/>      { /*No this is not a prop*/}
-         
+         <h1>{this.refs.xxx.value}</h1>
          {/*  //we cant use like this as ,By-Default you may not use ref attribute on function based component.because,they do not have instances.  */}
       </>
     );
