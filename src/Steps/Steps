@@ -28,14 +28,14 @@ function Mycomponent(){
   return(<input/>);
 }
 class parent extends React.Component{
-  constructor(props){
-    super(props);
-    this.text=React.createRef();
-  }
+   getValue2 = ()=> console.log(this.refs.xxx.value);
+    getValue1 = ()=> console.log(this.refs.yyy.value);
   render(){
     return(
-      <input ref={this.text}/>       //No this is not a prop
-      <MyComponent ref={this.text}/>         //we ant use like this as ,By-Default you may not use ref attribute on function based component.because,they do not have instances
+      < input="xxx" onClick={this.getValue2} />. //this is fine
+      <MyComponent ref="yyy" onClick={this.getValue1} />.  //this is not fine
+      
+      NOTE:By-Default you may not use ref attribute on function based component.because,they do not have instances
     );
   }
 }
