@@ -12,12 +12,12 @@ export default class App extends React.Component{
     super(props);
     //this.text=React.createRef();
   }
-  getValue = ()=>console.log(this.text.value);
+  getValue = ()=>console.log(this.refs.xxx.value);
   render(){
    
     return(
       <>
-      <input ref= {this.text}onClick={this.getValue}/>
+      <input ref= "xxx" onClick={this.getValue} />
          {/*  //we cant use like this as ,By-Default you may not use ref attribute on function based component.because,they do not have instances.  */}
       </>
     );
